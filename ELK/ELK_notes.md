@@ -1,5 +1,3 @@
-### 笔记
-
 ## 根据时间删除数据
 ```shell
 POST palmplay_push/sysMsg/_delete_by_query?conflicts=proceed
