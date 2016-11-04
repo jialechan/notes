@@ -23,7 +23,7 @@ input {
   }
 }
 ```
-写入客户端用如下方法写入input就可以获得
+写入客户端用如下方法写入，上面的input就可以获得
 ```shell
 rpush palmplay_push_sysMsg_show '{"name":"123","time": "2016-11-04 03:00:00"}'
 ```
