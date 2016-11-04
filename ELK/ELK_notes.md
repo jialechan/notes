@@ -53,3 +53,8 @@ filter {
 }
 ```
 将json里面的time字段，按指定格式转化为elasticsearch的时间
+
+### 查看索引使用的空间
+```shell
+GET /_cat/indices?v
+```
