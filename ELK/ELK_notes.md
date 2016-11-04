@@ -1,3 +1,15 @@
+### input为file的
+```shell
+input {
+  file {
+        type => "sysMsg"
+        path => ["/Users/jialechan/log/mylog.log"]
+        codec => "json"
+        start_position => "beginning"
+  }
+}
+```
+
 ### 根据时间删除数据
 ```shell
 POST palmplay_push/sysMsg/_delete_by_query?conflicts=proceed
