@@ -9,6 +9,24 @@ input {
   }
 }
 ```
+### input为redis
+```shell
+input {
+  redis {
+    type => "sysMsg"
+    host => "127.0.0.1"
+    port => "6379"
+    data_type => "list" # If redis_type is list, then we will BLPOP the key
+    db => 0
+    codec => "json"
+    key => "palmplay_push_sysMsg_show"
+  }
+}
+```
+写入客户端用如下方法写入input就可以获得
+```shell
+rpush palmplay_push_sysMsg_show '{"name":"123","time": "2016-11-04 03:00:00"}'
+```
 
 ### 根据时间删除数据
 ```shell
