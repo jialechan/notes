@@ -45,6 +45,14 @@ POST palmplay_push/sysMsg/_delete_by_query?conflicts=proceed
 ```
 
 ### 将json里面的field的时间转换为elasticsearch的时间
+比如json如下：
+```json
+{
+  ...
+  "time": "2016-10-01 00:10:00"
+  ...
+}
+```
 ```shell
 filter {
   date {
@@ -52,7 +60,7 @@ filter {
   }
 }
 ```
-将json里面的time字段，按指定格式转化为elasticsearch的时间
+标示将json里面的time字段（格式为"YYYY-MM-dd HH:mm:ss"）转化为elasticsearch的时间
 
 ### 查看索引使用的空间
 ```shell
