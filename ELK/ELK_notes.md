@@ -48,9 +48,7 @@ POST palmplay_push/sysMsg/_delete_by_query?conflicts=proceed
 比如json如下：
 ```json
 {
-  ...
   "time": "2016-10-01 00:10:00"
-  ...
 }
 ```
 ```shell
@@ -60,8 +58,13 @@ filter {
   }
 }
 ```
-标示将json里面的time字段（格式为"YYYY-MM-dd HH:mm:ss"）转化为elasticsearch的时间
-
+标示将json里面的time字段（格式为"YYYY-MM-dd HH:mm:ss"）转化为es的时间
+```shell
+date {
+    match => [ "time", "UNIX_MS" ]
+}
+```
+而UNIX_MS就可以将时间戳，比如java里面的System.currentTimeMillis（例如1478965598485）转化为es的时间
 ### 查看索引使用的空间
 ```shell
 GET /_cat/indices?v
