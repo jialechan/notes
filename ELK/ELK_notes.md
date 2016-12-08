@@ -1,3 +1,7 @@
+### 一个完整例子
+
+https://gist.github.com/jialechan/83199d23e0c9be8a8365e226692c1a45
+
 ### input为file的
 ```shell
 input {
