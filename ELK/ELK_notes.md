@@ -19,13 +19,13 @@ input {
     data_type => "list" # If redis_type is list, then we will BLPOP the key
     db => 0
     codec => "json"
-    key => "palmplay_push_sysMsg_show"
+    key => "sysMsg_show"
   }
 }
 ```
 写入客户端用如下方法写入，上面的input就可以获得
 ```shell
-rpush palmplay_push_sysMsg_show '{"name":"123","time": "2016-11-04 03:00:00"}'
+rpush sysMsg_show '{"name":"123","time": "2016-11-04 03:00:00"}'
 ```
 
 ### 根据时间删除数据
