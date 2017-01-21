@@ -8,3 +8,6 @@ mount -o remount,rw -t yaffs2 /dev/block/mtdblock3 /system
 
 cat 代替cp
 cat /sdcard/test.mp3 >/system/media/audio/test.mp3
+
+指定设备
+adb -s xxx shell
