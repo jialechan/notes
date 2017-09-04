@@ -59,6 +59,7 @@ POST palmplay_push/sysMsg/_delete_by_query?conflicts=proceed
 filter {
   date {
     match => [ "time", "YYYY-MM-dd HH:mm:ss" ]
+    target => "time" # Default value is "@timestamp", 这里time就是只是将time转为日期
   }
 }
 ```
@@ -69,6 +70,21 @@ date {
 }
 ```
 而UNIX_MS就可以将时间戳，比如java里面的System.currentTimeMillis（例如1478965598485）转化为es的时间
+
+### 
+```shell
+output {
+    elasticsearch {
+        index => "device-%{+YYYY.MM.dd}"
+        document_type => "device"
+        document_id => "%{imei}" 
+        hosts => "127.0.0.1:9200"
+        action => "create" 
+    }
+}
+```
+imei作为id   
+action将会影响重复id的时候的策略，[详情](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-action)
 ### 查看索引使用的空间
 ```shell
 GET /_cat/indices?v
