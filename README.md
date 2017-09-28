@@ -8,3 +8,7 @@ netstat -an|grep ESTABLISHED|wc -l
 jstat -gc 12538 1000
 ```
 查看pid为12538的情况，每1秒显示一次
+### 查看cpu
+```shell
+cat /proc/cpuinfo
+```
