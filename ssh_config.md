@@ -20,3 +20,8 @@ PasswordAuthentication no
 也即只能使用密匙认证的openssh，禁止使用口令认证。  
 重启sshd: service sshd restart
 
+### 遇到问题时
+```shell
+restorecon -Rv /root/.ssh
+```
+或者可以救到你，参考：https://serverfault.com/questions/55343/cant-get-ssh-public-key-authentication-to-work
