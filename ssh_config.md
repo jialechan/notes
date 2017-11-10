@@ -26,5 +26,5 @@ restorecon -Rv /root/.ssh
 ```
 或者可以救到你，参考：https://serverfault.com/questions/55343/cant-get-ssh-public-key-authentication-to-work
    
-ssh断开      
+ #### ssh断开问题      
 修改/etc/ssh/sshd_config配置文件，找到ClientAliveCountMax（单位为分钟）修改你想要的值，执行service sshd reload 
