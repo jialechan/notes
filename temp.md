@@ -8,7 +8,6 @@
 * <a href="#添加sdk配置">添加sdk配置</a>
 * <a href="#删除sdk配置">删除sdk配置</a>
 * <a href="#添加渠道">添加渠道</a>
-* <a href="#删除渠道">删除渠道</a>
 * <a href="#检查插件">检查插件</a>
 
 <b><a href="#错误码定义" >错误码定义</a></b>
@@ -25,7 +24,9 @@
 curl -X POST  -d '{
 	"desc":"desc",
 	"name":"name",
+	"pluginPackageName":"pluginPackageName",
 	"size":0,
+	"startPoint":"startPoint",
 	"url":"url",
 	"version":0
 }' "http://host:port/addSdkPlugin"
@@ -36,9 +37,11 @@ curl -X POST  -d '{
 <tr>
     <th width="100px">参数名</th><th width="100px">必要参数</th><th width="200px">限制</th><th>说明</th>
 </tr>
-<tr><td>desc</td><td>可选</td><td>长度边界[1 : 2147483647]<br/></td><td>插件包描述</td></tr>
+<tr><td>desc</td><td>必须</td><td>长度边界[1 : 2147483647]<br/></td><td>插件包描述</td></tr>
 <tr><td>name</td><td>必须</td><td>长度边界[1 : 50]<br/></td><td>插件名称</td></tr>
+<tr><td>pluginPackageName</td><td>必须</td><td>长度边界[1 : 1000]<br/></td><td>插件的包名</td></tr>
 <tr><td>size</td><td>必须</td><td>必须大于或等于0<br/></td><td>插件包大小</td></tr>
+<tr><td>startPoint</td><td>必须</td><td>长度边界[1 : 1000]<br/></td><td>启动类的名称</td></tr>
 <tr><td>url</td><td>必须</td><td> --- </td><td>插件包的下载url</td></tr>
 <tr><td>version</td><td>必须</td><td>必须大于或等于0<br/></td><td>插件版本</td></tr>
 </table>
@@ -71,7 +74,9 @@ curl -X POST  -d '{
 	"desc":"desc",
 	"id":"id",
 	"name":"name",
+	"pluginPackageName":"pluginPackageName",
 	"size":0,
+	"startPoint":"startPoint",
 	"url":"url",
 	"version":0
 }' "http://host:port/modifySdkPlugin"
@@ -82,10 +87,12 @@ curl -X POST  -d '{
 <tr>
     <th width="100px">参数名</th><th width="100px">必要参数</th><th width="200px">限制</th><th>说明</th>
 </tr>
-<tr><td>desc</td><td>可选</td><td>长度边界[1 : 2147483647]<br/></td><td>插件包描述</td></tr>
+<tr><td>desc</td><td>必须</td><td>长度边界[1 : 2147483647]<br/></td><td>插件包描述</td></tr>
 <tr><td>id</td><td>必须</td><td> --- </td><td>唯一id</td></tr>
 <tr><td>name</td><td>必须</td><td>长度边界[1 : 50]<br/></td><td>插件名称</td></tr>
+<tr><td>pluginPackageName</td><td>必须</td><td>长度边界[1 : 1000]<br/></td><td>插件的包名</td></tr>
 <tr><td>size</td><td>必须</td><td>必须大于或等于0<br/></td><td>插件包大小</td></tr>
+<tr><td>startPoint</td><td>必须</td><td>长度边界[1 : 1000]<br/></td><td>启动类的名称</td></tr>
 <tr><td>url</td><td>必须</td><td> --- </td><td>插件包的下载url</td></tr>
 <tr><td>version</td><td>必须</td><td>必须大于或等于0<br/></td><td>插件版本</td></tr>
 </table>
@@ -164,7 +171,9 @@ curl -X GET "http://host:port/getSdkPlugins
 			"desc":"desc",
 			"id":"id",
 			"name":"name",
+			"pluginPackageName":"pluginPackageName",
 			"size":0,
+			"startPoint":"startPoint",
 			"url":"url",
 			"version":0
 		}
@@ -178,10 +187,12 @@ curl -X GET "http://host:port/getSdkPlugins
 </tr>
 <tr><td>code</td><td>必须</td><td> --- </td><td>状态码, 0：完成</td></tr>
 <tr><td>sdkPluginsList</td><td>必须</td><td> --- </td><td>sdk插件列表</td><tr><td>
-&nbsp;&nbsp;&nbsp;&nbsp;desc</td><td>可选</td><td>长度边界[1 : 2147483647]<br/></td><td>插件包描述</td></tr><tr><td>
+&nbsp;&nbsp;&nbsp;&nbsp;desc</td><td>必须</td><td>长度边界[1 : 2147483647]<br/></td><td>插件包描述</td></tr><tr><td>
 &nbsp;&nbsp;&nbsp;&nbsp;id</td><td>必须</td><td> --- </td><td>唯一id</td></tr><tr><td>
 &nbsp;&nbsp;&nbsp;&nbsp;name</td><td>必须</td><td>长度边界[1 : 50]<br/></td><td>插件名称</td></tr><tr><td>
+&nbsp;&nbsp;&nbsp;&nbsp;pluginPackageName</td><td>必须</td><td>长度边界[1 : 1000]<br/></td><td>插件的包名</td></tr><tr><td>
 &nbsp;&nbsp;&nbsp;&nbsp;size</td><td>必须</td><td>必须大于或等于0<br/></td><td>插件包大小</td></tr><tr><td>
+&nbsp;&nbsp;&nbsp;&nbsp;startPoint</td><td>必须</td><td>长度边界[1 : 1000]<br/></td><td>启动类的名称</td></tr><tr><td>
 &nbsp;&nbsp;&nbsp;&nbsp;url</td><td>必须</td><td> --- </td><td>插件包的下载url</td></tr><tr><td>
 &nbsp;&nbsp;&nbsp;&nbsp;version</td><td>必须</td><td>必须大于或等于0<br/></td><td>插件版本</td></tr></tr>
 </table>
@@ -285,38 +296,8 @@ curl -X POST  -d '{
 ### 定义
 ```shell
 curl -X POST  -d '{
-	"id":"id"
+	"name":"name"
 }' "http://host:port/addChannels"
-```
-
-
-### 正确返回
-```json
-{
-	"code":0
-}
-```
-### 正确返回参数说明
-<table>
-<tr>
-    <th width="100px">参数名</th><th width="100px">必要参数</th><th width="200px">限制</th><th>说明</th>
-</tr>
-<tr><td>code</td><td>必须</td><td> --- </td><td>状态码, 0：完成</td></tr>
-</table>
-
-<a href="#api列表" style="font-size:8px;">返回api列表</a>
-
-
-## <a name="删除渠道" id="删除渠道" >[ 删除渠道 ]</a>
-### 接口说明
-```txt
-删除渠道。注意：以往渠道相关的配置不会同时删除
-```
-### 定义
-```shell
-curl -X POST  -d '{
-	"id":"id"
-}' "http://host:port/deleteChannel"
 ```
 
 ### 请求参数说明
@@ -324,7 +305,7 @@ curl -X POST  -d '{
 <tr>
     <th width="100px">参数名</th><th width="100px">必要参数</th><th width="200px">限制</th><th>说明</th>
 </tr>
-<tr><td>id</td><td>必须</td><td> --- </td><td>根据id删除</td></tr>
+<tr><td>name</td><td>必须</td><td>长度边界[1 : 200]<br/></td><td>渠道名称</td></tr>
 </table>
 
 ### 正确返回
@@ -361,7 +342,7 @@ curl -X POST  -d '{
 	"packageName":"packageName",
 	"pluginsInfo":[
 		{
-			"id":"id",
+			"pluginPackageName":"pluginPackageName",
 			"version":0
 		}
 	],
@@ -383,7 +364,7 @@ curl -X POST  -d '{
 <tr><td>model</td><td>必须</td><td> --- </td><td>设备型号</td></tr>
 <tr><td>packageName</td><td>必须</td><td> --- </td><td>宿主应用包名</td></tr>
 <tr><td>pluginsInfo</td><td>必须</td><td> --- </td><td>插件信息集合</td><tr><td>
-&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>可选</td><td> --- </td><td>插件id</td></tr><tr><td>
+&nbsp;&nbsp;&nbsp;&nbsp;pluginPackageName</td><td>可选</td><td> --- </td><td>插件的报名</td></tr><tr><td>
 &nbsp;&nbsp;&nbsp;&nbsp;version</td><td>可选</td><td> --- </td><td>插件版本</td></tr></tr>
 <tr><td>resolution</td><td>必须</td><td> --- </td><td>分辨率</td></tr>
 <tr><td>sdkVer</td><td>必须</td><td> --- </td><td>sdk版本号，int类型</td></tr>
@@ -397,6 +378,7 @@ curl -X POST  -d '{
 	"pluginsInfo":[
 		{
 			"id":"id",
+			"md5":"md5",
 			"status":"status",
 			"url":"url",
 			"version":0
@@ -413,7 +395,8 @@ curl -X POST  -d '{
 <tr><td>interval</td><td>必须</td><td> --- </td><td>下次来更新的时间间隔，单位分钟</td></tr>
 <tr><td>pluginsInfo</td><td>必须</td><td> --- </td><td>插件检查结果集合</td><tr><td>
 &nbsp;&nbsp;&nbsp;&nbsp;id</td><td>必须</td><td> --- </td><td>插件id</td></tr><tr><td>
-&nbsp;&nbsp;&nbsp;&nbsp;status</td><td>必须</td><td>必须为以下可用值之一: [ "OK", "NEED_UPDATE", "DELETE" ]<br/></td><td>OK:已经最新, NEED_UPDATE:需要更新, DELETE:需要删除</td></tr><tr><td>
+&nbsp;&nbsp;&nbsp;&nbsp;md5</td><td>必须</td><td> --- </td><td>包的md5值</td></tr><tr><td>
+&nbsp;&nbsp;&nbsp;&nbsp;status</td><td>必须</td><td>必须为以下可用值之一: [ "OK", "NEED_UPDATE", "DELETE", "NEW" ]<br/></td><td>OK:已经最新, NEED_UPDATE:需要更新, DELETE:需要删除, NEW:新插件</td></tr><tr><td>
 &nbsp;&nbsp;&nbsp;&nbsp;url</td><td>必须</td><td> --- </td><td>插件下载url</td></tr><tr><td>
 &nbsp;&nbsp;&nbsp;&nbsp;version</td><td>必须</td><td> --- </td><td>插件版本</td></tr></tr>
 </table>
