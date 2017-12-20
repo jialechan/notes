@@ -12,3 +12,8 @@ jstat -gc 12538 1000
 ```shell
 cat /proc/cpuinfo
 ```
+
+### 查看什么程序ip访问8080端口
+```shell
+netstat -natp|grep 8080
+```
