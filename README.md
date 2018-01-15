@@ -17,3 +17,7 @@ cat /proc/cpuinfo
 ```shell
 netstat -natp|grep 8080
 ```
+### 查看文件夹占用空间并排序
+```shell
+du -m --max-depth=1 | sort -rn
+```
