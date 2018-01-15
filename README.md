@@ -21,3 +21,7 @@ netstat -natp|grep 8080
 ```shell
 du -m --max-depth=1 | sort -rn
 ```
+### 获取公网ip
+```shell
+curl https://www.taobao.com/help/getip.php
+```
