@@ -5,7 +5,7 @@ vim /etc/sysctl.conf
 vm.overcommit_memory=1
 vm.max_map_count=262144
 ```
-命令行生效：sysctl -w vm.max_map_count=262144
+命令行生效：/sbin/sysctl -p
 
 ## 查看集群
 ```shell
