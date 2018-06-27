@@ -1,6 +1,6 @@
 ```json
 {
-    "id": "IxexyLDIIk",
+    "id": "IxexyLDIIk", //string; required; Unique ID of the bid request, provided by the exchange.
     "imp": [
         {
             "id": "1",
