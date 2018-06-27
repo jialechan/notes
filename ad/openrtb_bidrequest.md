@@ -31,24 +31,9 @@
         "ua": "Mozilla/5.0 (Linux; U; Android 4.3; en-us; SCH-I535 Build/JSS15J) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
         "ip": "192.168.1.1",
         "language": "en",
-        "devicetype": 1,
-        "js": 1,
-        "connectiontype": 3,
         "dpidsha1": "F099E6D1C485756C45D1EEACB33C73B55C4BC499",
-        "carrier": "Verizon Wireless",
         "geo": {
-            "country": "USA",
-            "region": "PA",
-            "type": 3,
-            "ext": {
-                "latlonconsent": 1
-            }
-        }
-    },
-    "user": {
-        "id": "bd5adc55dcbab4bf090604df4f543d90b09f0c88",
-        "ext": {
-            "sessiondepth": 207
+            "country": "USA"
         }
     }
 }
@@ -71,16 +56,14 @@
 | app.ver  | Application version.  |
 | app.bundle  | Application bundle or package name (e.g., com.foo.mygame); intended to be a unique ID across exchanges. |
 | device  | object; recommended; Details via a Device object about the user’s device to which the impression will be delivered.  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| device.make  | string; Device make (e.g., “Apple”).  |
+| device.model  | string; Device model (e.g., “iPhone”).  |
+| device.os  | string; Device operating system (e.g., “iOS”).  |
+| device.osv  | string; Device operating system version (e.g., “3.1.2”).  |
+| device.ua  | string; user agent  |
+| device.ip  | string; recommended; IPv4 address closest to device. |
+| device.language  | string; Browser language using ISO-639-1-alpha-2.  |
+| device.dpidsha1  | string; Platform device ID (e.g., Android ID); hashed via SHA1.  |
+| device.geo  | object; Location of the device assumed to be the user’s current location defined by a Geo object  |
+| device.geo.country  | string; Country code using ISO-3166-1-alpha-3.  |
 
