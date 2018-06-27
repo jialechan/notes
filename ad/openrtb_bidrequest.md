@@ -1,4 +1,4 @@
-```json
+```
 {
     "id": "IxexyLDIIk", //string; required; Unique ID of the bid request, provided by the exchange.
     "imp": [
