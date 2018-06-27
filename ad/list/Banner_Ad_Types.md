@@ -1,3 +1,4 @@
+# Banner Ad Types
 The following table indicates the types of ads that can be accepted by the exchange unless restricted by publisher site settings.
 
 Values | Desc | 
