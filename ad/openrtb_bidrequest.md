@@ -1,7 +1,7 @@
 ```
 {
-    "id": "IxexyLDIIk", //string; required; Unique ID of the bid request, provided by the exchange.
-    "imp": [ //object array; required; Array of Imp objects representing the impressionsoffered. At least 1 Impobjectis required.
+    "id": "IxexyLDIIk", 
+    "imp": [ 
         {
             "id": "1", //string; required; A unique identifier for this impression within the context of the bid request (typically, starts with 1 and increments.
             "banner": { //A Banner object; required if this impression is offered as a banner ad opportunity.
@@ -87,3 +87,7 @@ If neither hmin nor hmax are specified, this value is an exact height requiremen
     ]
 }
 ```
+| field  | desc |
+| ------------- | ------------- |
+| id  | string; required; Unique ID of the bid request, provided by the exchange.  |
+| imp  | object array; required; Array of Imp objects representing the impressionsoffered. At least 1 Impobjectis required.  |
