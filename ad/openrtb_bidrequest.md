@@ -1,13 +1,15 @@
 ```
 {
     "id": "IxexyLDIIk", //string; required; Unique ID of the bid request, provided by the exchange.
-    "imp": [
+    "imp": [ //object array; required; Array of Imp objects representing the impressionsoffered. At least 1 Impobjectis required.
         {
-            "id": "1",
-            "banner": {
-                "w": 728,
-                "h": 90,
-                "pos": 1,
+            "id": "1", //string; required; A unique identifier for this impression within the context of the bid request (typically, starts with 1 and increments.
+            "banner": { //A Banner object; required if this impression is offered as a banner ad opportunity.
+                "w": 728, //integer; recommended; Width of the impression in pixels.
+If neither wmin nor wmax are specified, this value is an exact width requirement. Otherwise it is a preferred width.
+                "h": 90, //integer; recommended; Height of the impression in pixels.
+If neither hmin nor hmax are specified, this value is an exact height requirement. Otherwise it is a preferred height.
+                "pos": 1, //integer; Ad position on screen
                 "btype": [
                     4
                 ],
