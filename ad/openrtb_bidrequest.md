@@ -1,88 +1,56 @@
 ```
 {
-    "id": "IxexyLDIIk", 
-    "imp": [ 
+    "id": "7979d0c78074638bbdf739ffdf285c7e1c74a691",
+    "imp": [
         {
-            "id": "1", 
-            "banner": { 
-                "w": 728, 
-                "h": 90, 
-                "pos": 1, 
-                "btype": [
-                    4
-                ],
-                "battr": [
-                    14
-                ],
-                "api": [
-                    3
-                ]
-            },
+            "id": "1",
+            "banner": {
+                "w": 300,
+                "h": 250,
+                "pos": 1
+            }
             "instl": 0,
-            "tagid": "agltb3B1Yi1pbmNyDQsSBFNpdGUY7fD0FAw",
             "bidfloor": 0.5
         }
     ],
     "app": {
-        "id": "agltb3B1Yi1pbmNyDAsSA0FwcBiJkfIUDA",
+        "id": "20625",
         "name": "Yahoo Weather",
         "cat": [
-            "weather",
             "IAB15",
             "IAB15-10"
         ],
         "ver": "1.0.2",
-        "bundle": "628677149",
-        "publisher": {
-            "id": "agltb3B1Yi1pbmNyDAsSA0FwcBiJkfTUCV",
-            "name": "yahoo",
-            "domain": "www.yahoo.com"
-        },
-        "storeurl": "https://itunes.apple.com/id628677149"
+        "bundle": "628677149"
     },
     "device": {
-        "dnt": 0,
-        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 6_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
-        "ip": "123.145.167.189",
-        "geo": {
-            "country": "USA",
-            "lat": 35.012345,
-            "lon": -115.12345,
-            "city": "Los Angeles",
-            "metro": "803",
-            "region": "CA",
-            "zip": "90049"
-        },
-        "dpidsha1": "AA000DFE74168477C70D291f574D344790E0BB11",
-        "dpidmd5": "AA003EABFB29E6F759F3BDAB34E50BB11",
-        "carrier": "310-410",
+        "make": "Samsung",
+        "model": "SCH-I535",
+        "os": "Android",
+        "osv": "4.3",
+        "ua": "Mozilla/5.0 (Linux; U; Android 4.3; en-us; SCH-I535 Build/JSS15J) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "ip": "192.168.1.1",
         "language": "en",
-        "make": "Apple",
-        "model": "iPhone",
-        "os": "iOS",
-        "osv": "6.1",
+        "devicetype": 1,
         "js": 1,
         "connectiontype": 3,
-        "devicetype": 1
+        "dpidsha1": "F099E6D1C485756C45D1EEACB33C73B55C4BC499",
+        "carrier": "Verizon Wireless",
+        "geo": {
+            "country": "USA",
+            "region": "PA",
+            "type": 3,
+            "ext": {
+                "latlonconsent": 1
+            }
+        }
     },
     "user": {
-        "id": "ffffffd5135596709273b3a1a07e466ea2bf4fff",
-        "yob": "1984",
-        "gender": "M"
-    },
-    "at": 2,
-    "bcat": [
-        "IAB25",
-        "IAB7-39",
-        "IAB8-18",
-        "IAB8-5",
-        "IAB9-9"
-    ],
-    "badv": [
-        "apple.com",
-        "go-text.me",
-        "heywire.com"
-    ]
+        "id": "bd5adc55dcbab4bf090604df4f543d90b09f0c88",
+        "ext": {
+            "sessiondepth": 207
+        }
+    }
 }
 ```
 | field  | desc |
@@ -94,6 +62,15 @@
 | imp[0].banner.w  | integer; recommended; Width of the impression in pixels. If neither wmin nor wmax are specified, this value is an exact width requirement. Otherwise it is a preferred width. |
 | imp[0].banner.h  | integer; recommended; Height of the impression in pixels. If neither hmin nor hmax are specified, this value is an exact height requirement. Otherwise it is a preferred height.  |
 | imp[0].banner.pos  | integer; <a href="https://github.com/jialechan/notes/blob/master/ad/list/Ad_Position.md" target="_blank">Ad position on screen</a>  |
+| imp[0].instl  | integer; default 0; 1 = the ad is interstitial or full screen, 0 = not interstitial.  |
+| imp[0].bidfloor  | float; default 0; Minimum bid for this impression expressed in CPM.  |
+| app  | object; recommended; Details via an App object about the publisher’s app (i.e., non-browser applications). Only applicable and recommended for apps.  |
+| app.id  | string; recommended; Exchange-specific app ID.  |
+| app.name  | string; App name (may be aliased at the publisher’s request).  |
+| app.cat  | string array; Array of IAB <a href="https://github.com/jialechan/notes/blob/master/ad/list/Content_Categories.md">content categories</a> of the app.  |
+| app.ver  | Application version.  |
+| app.bundle  | Application bundle or package name (e.g., com.foo.mygame); intended to be a unique ID across exchanges. |
+| device  | object; recommended; Details via a Device object about the user’s device to which the impression will be delivered.  |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
@@ -103,3 +80,7 @@
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
