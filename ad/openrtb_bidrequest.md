@@ -3,13 +3,11 @@
     "id": "IxexyLDIIk", 
     "imp": [ 
         {
-            "id": "1", //string; required; A unique identifier for this impression within the context of the bid request (typically, starts with 1 and increments.
-            "banner": { //A Banner object; required if this impression is offered as a banner ad opportunity.
-                "w": 728, //integer; recommended; Width of the impression in pixels.
-If neither wmin nor wmax are specified, this value is an exact width requirement. Otherwise it is a preferred width.
-                "h": 90, //integer; recommended; Height of the impression in pixels.
-If neither hmin nor hmax are specified, this value is an exact height requirement. Otherwise it is a preferred height.
-                "pos": 1, //integer; Ad position on screen
+            "id": "1", 
+            "banner": { 
+                "w": 728, 
+                "h": 90, 
+                "pos": 1, 
                 "btype": [
                     4
                 ],
@@ -91,3 +89,17 @@ If neither hmin nor hmax are specified, this value is an exact height requiremen
 | ------------- | ------------- |
 | id  | string; required; Unique ID of the bid request, provided by the exchange.  |
 | imp  | object array; required; Array of Imp objects representing the impressionsoffered. At least 1 Impobjectis required.  |
+| imp[0].id  | string; required; A unique identifier for this impression within the context of the bid request (typically, starts with 1 and increments.  |
+| imp[0].banner  | A Banner object; required if this impression is offered as a banner ad opportunity.  |
+| imp[0].banner.w  | integer; recommended; Width of the impression in pixels. If neither wmin nor wmax are specified, this value is an exact width requirement. Otherwise it is a preferred width. |
+| imp[0].banner.h  | integer; recommended; Height of the impression in pixels. If neither hmin nor hmax are specified, this value is an exact height requirement. Otherwise it is a preferred height.  |
+| imp[0].banner.pos  | integer; <a href="https://github.com/jialechan/notes/blob/master/ad/list/Ad_Position.md" target="_blank">Ad position on screen</a>  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
