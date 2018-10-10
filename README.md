@@ -25,3 +25,7 @@ du -m --max-depth=1 | sort -rn
 ```shell
 curl https://www.taobao.com/help/getip.php
 ```
+### 每天0点删除某目录下包含.log的而且是10天前
+```shell
+00 00 * * * find /userdata1/logs/dmenu -mtime +10 -name "*.log*" -exec rm -rf {} \;
+```
