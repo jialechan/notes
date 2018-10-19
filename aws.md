@@ -6,3 +6,5 @@
 * 每个ec2创建就会分配一个公网ip,但是每次停止再启动后ip都会变，如果需要一个固定ip，需要一个叫做弹性ip地址的服务
 * 可以为一个ec2实例添加网络接口（你就当是加一个网卡），然后再关联弹性ip到这个网络接口，那么这个ec2就有两个公网ip了
 * 每个网络接口都有一个公网ip和私有ip, ec2是不知道任何关于她的公有ip的事情的
+* ec2可以通过 curl -s http://169.254.169.254/latest/meta-data/local-ipv4 来获取私有ip
+* ec2可以通过 curl -s http://169.254.169.254/latest/meta-data/public-ipv4 来获取公有ip
