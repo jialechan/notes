@@ -28,3 +28,7 @@
 其他
 * DynamoDB有golbal table功能，可以跨数据中心
 * Kinesis是对标Kafka的队列，也可以跨数据中心
+
+
+X-Ray
+* [自定义分组](https://docs.aws.amazon.com/zh_cn/xray/latest/devguide/scorekeep-subsegments.html)
