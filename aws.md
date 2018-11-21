@@ -36,7 +36,7 @@ IAM：谁（身份认证）能做什么（授权）。使用IAM进行身份认�
 -------------------------------------------------
 
 VPC
-* 如果你vpc有划分私有子网，那在私有子网里面的ec2必须要nat才可以访问其他aws资源（s3, dynamodb, kinesis等）,还有一个办法是用[vpn endpoint](https://docs.aws.amazon.com/zh_cn/vpc/latest/userguide/vpc-endpoints.html), 后者是一个更加好的实现，因为使用aws api的流量这样就不会离开Amazon 网络。
+* 如果你vpc有划分私有子网，那在私有子网里面的ec2必须要nat才可以访问其他aws资源（s3, dynamodb, kinesis等）,还有一个办法是用[vpc endpoint](https://docs.aws.amazon.com/zh_cn/vpc/latest/userguide/vpc-endpoints.html), 后者是一个更加好的实现，因为使用aws api的流量这样就不会离开Amazon网络。
 
 
 X-Ray
