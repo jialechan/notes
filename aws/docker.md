@@ -11,6 +11,6 @@ sudo usermod -a -G docker ec2-user
 docker run --name ci-mongo -p 27017:27017 -d  mongo:3.4 
 docker run --name ci-redis -p 6379:6379 -d redis:5.0.3
 docker run --name ic-mysql -e MYSQL_ROOT_PASSWORD=xxxxxx -p 3306:3306 -d mysql:5.7.25
-docker run -d --name sonarqube -p 80:9000 -e sonar.jdbc.username=root -e sonar.jdbc.password=xxxxxx -e sonar.jdbc.url='jdbc:mysql://xxxxxx:3306/xxxxxx?autoReconnect=true&useUnicode=true&characterEncoding=utf-8' sonarqube
+docker run -d --name sonarqube -p 80:9000 -e sonar.jdbc.username=root -e sonar.jdbc.password=xxxxxx -e sonar.jdbc.url='jdbc:mysql://xxxxxx:3306/xxx?autoReconnect=true&useUnicode=true&characterEncoding=utf8' sonarqube
 ```
 
