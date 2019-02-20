@@ -13,3 +13,5 @@ aws --version
 aws configure --profile user2
 ```
 
+## 配置优先顺序
+[点这里](https://docs.aws.amazon.com/zh_cn/cli/latest/userguide/cli-chap-configure.html#config-settings-and-precedence)
