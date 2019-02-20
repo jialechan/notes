@@ -14,7 +14,8 @@ aws configure --profile user2
 ```
 
 ## 配置优先顺序
-[点这里](https://docs.aws.amazon.com/zh_cn/cli/latest/userguide/cli-chap-configure.html#config-settings-and-precedence)
+命令行选项 > 环境变量 > CLI 凭证文件 > CLI 配置文件 > 容器凭证 > 实例配置文件凭证    
+[详情](https://docs.aws.amazon.com/zh_cn/cli/latest/userguide/cli-chap-configure.html#config-settings-and-precedence)
 
 ## 生成并使用参数骨架文件
 ```shell
