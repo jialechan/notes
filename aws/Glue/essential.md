@@ -14,4 +14,5 @@
 [详细](https://docs.aws.amazon.com/zh_cn/glue/latest/dg/populate-data-catalog.html)
 
 ## 注意
-目前，使用控制台创建的分区表不能用于 ETL 作业。
+* 手动创建表的源数据的位置必须是 Amazon S3 路径
+* 目前，使用控制台创建的分区表不能用于 ETL 作业。
