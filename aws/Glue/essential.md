@@ -12,3 +12,6 @@
 ## 填充 AWS Glue 数据目录
 ![架构图](https://docs.aws.amazon.com/zh_cn/glue/latest/dg/images/PopulateCatalog-overview.png)     
 [详细](https://docs.aws.amazon.com/zh_cn/glue/latest/dg/populate-data-catalog.html)
+
+## 注意
+目前，使用控制台创建的分区表不能用于 ETL 作业。
