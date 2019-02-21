@@ -10,5 +10,5 @@
 [详细](https://docs.aws.amazon.com/zh_cn/glue/latest/dg/start-console-overview.html)
 
 ## 填充 AWS Glue 数据目录
-![架构图](https://docs.aws.amazon.com/zh_cn/glue/latest/dg/images/PopulateCatalog-overview.png) 
+![架构图](https://docs.aws.amazon.com/zh_cn/glue/latest/dg/images/PopulateCatalog-overview.png)     
 [详细](https://docs.aws.amazon.com/zh_cn/glue/latest/dg/populate-data-catalog.html)
