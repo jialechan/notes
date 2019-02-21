@@ -8,3 +8,7 @@
 3. 运行作业以转换数据
 4. 监控您的已计划的爬网程序和已触发的作业   
 [详细](https://docs.aws.amazon.com/zh_cn/glue/latest/dg/start-console-overview.html)
+
+## 填充 AWS Glue 数据目录
+![架构图](https://docs.aws.amazon.com/zh_cn/glue/latest/dg/images/PopulateCatalog-overview.png) 
+[详细](https://docs.aws.amazon.com/zh_cn/glue/latest/dg/populate-data-catalog.html)
