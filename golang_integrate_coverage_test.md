@@ -45,7 +45,7 @@ go test -c -coverpkg ./...
 ```
 ### run test app
 ```shell
-./http-demo.test  -test.coverprofile coverage.cov
+./http-demo.test -test.coverprofile coverage.cov
 ```
 ### run auto test 
 ```bash
