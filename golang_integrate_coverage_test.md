@@ -65,6 +65,7 @@ $ /path_to_sonar/bin/sonar-scanner -Dsonar.host.url=http://xxx -Dsonar.login=xxx
 ```
 
 ### 参考资料
-https://www.cnblogs.com/zhaoxd07/p/8028847.html   
+https://www.cnblogs.com/zhaoxd07/p/8028847.html  
+https://www.elastic.co/blog/code-coverage-for-your-golang-system-tests   
 https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner   
 https://docs.sonarqube.org/latest/analysis/analysis-parameters/
