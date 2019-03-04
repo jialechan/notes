@@ -61,7 +61,13 @@ coverage: 100.0% of statements in ./...
 ```
 ### 上传分析到sonar
 ```shell
-$ /path_to_sonar/bin/sonar-scanner -Dsonar.host.url=http://xxx -Dsonar.login=xxx -Dsonar.go.coverage.reportPaths=/Users/jialechan/GolandProjects/http-demo/coverage.out -Dsonar.projectKey=jiale:http-demo -Dsonar.sources=/Users/jialechan/GolandProjects/http-demo/ -Dsonar.coverage.exclusions=**/*_test.go
+$ /path_to_sonar/bin/sonar-scanner -Dsonar.host.url=http://xxx \
+-Dsonar.login=xxx \
+-Dsonar.go.coverage.reportPaths=/Users/jialechan/GolandProjects/http-demo/coverage.out \
+-Dsonar.projectKey=jiale:http-demo \
+-Dsonar.sources=/Users/jialechan/GolandProjects/http-demo/ \
+-Dsonar.coverage.exclusions=**/*_test.go \
+-Dsonar.scm.disabled=true
 ```
 
 ### 参考资料
