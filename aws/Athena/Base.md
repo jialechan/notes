@@ -1,5 +1,5 @@
 ## 一些备忘例子
-```shell
+```sql
 SELECT count(1)
 FROM alb_logs
 WHERE request_processing_time != -1 and target_processing_time > 0.02
