@@ -10,7 +10,7 @@ use mysql;
 select * from slow_log order by start_time desc
 ```
 
-### 查看数据库这台的一些命令
+### 查看数据库状态的一些命令
 ```sql 
 show full processlist;
 show engine innodb mutex;
