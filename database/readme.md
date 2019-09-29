@@ -9,3 +9,10 @@ select * from tables where TABLE_SCHEMA = 'xxx' order by table_rows desc;
 use mysql;
 select * from slow_log order by start_time desc
 ```
+
+### 查看数据库这台的一些命令
+```sql 
+show full processlist;
+show engine innodb mutex;
+show global status;
+```
