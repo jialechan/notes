@@ -19,7 +19,7 @@ netstat -natp|grep 8080
 ```
 ### 查看文件夹占用空间并排序
 ```shell
-du -h --max-depth=1 | sort -rn
+du -m --max-depth=1 | sort -rn
 ```
 ### 获取公网ip
 ```shell
