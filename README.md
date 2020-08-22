@@ -2,6 +2,7 @@
 ### 查看链接数
 ```shell
 netstat -an|grep ESTABLISHED|wc -l
+netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
 ```
 ### 查看gc情况
 ```shell
