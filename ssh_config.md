@@ -25,6 +25,12 @@ PasswordAuthentication no
 restorecon -Rv /root/.ssh
 ```
 或者可以救到你，参考：https://serverfault.com/questions/55343/cant-get-ssh-public-key-authentication-to-work
+```shell
+sudo vi /etc/ssh/sshd_config 
+# 将PermitRootLogin这一项改为yes 
+sudo service ssh restart
+```
+这个也救过一命
    
  #### ssh断开问题      
 vim /etc/ssh/sshd_config   
